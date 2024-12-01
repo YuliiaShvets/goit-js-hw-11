@@ -1,0 +1,178 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url('./reset.css');
+
+
+body {
+  margin: 0;
+  width: 1440px;
+  height: 496px;
+  top: -892px;
+  left: -695px;
+  padding: 36px 929px 316px 156px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  display: flex;
+  flex-direction: column;
+  padding-top: 36px;
+  padding-left: 156px;
+}
+
+
+.input{
+  width: 272px;
+  height: 36px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  outline: none;
+}
+
+.input:hover {
+  border: 1px solid #000000
+}
+
+
+.input:focus,
+.input:active {
+  border: 1px solid #4E75FF;
+}
+
+.text {
+  color: #808080;
+}
+
+.timer {
+  display: flex;
+  margin-top: 32px;
+  gap: 24px;
+  font-size: 40px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.value {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2e2f42;
+  text-transform: uppercase;
+}
+
+.start-button {
+  width: 75px;
+  height: 40px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4E75FF;
+  font-family: Montserrat;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+}
+
+.start-button:hover {
+  background-color: #6C8CFF;
+}
+
+.start-button:disabled {
+  background-color: #CFCFCF;
+  opacity: 0.5;
+  color: #808080;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  max-width: 360px;
+  margin-top: 36px;
+  margin-left: 156px;
+}
+
+.form-button {
+  width: 360px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 8px;
+  background-color: #4E75FF;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.form-button:hover {
+  background-color: #6C8CFF;
+
+}
+
+.label-text {
+  color: #2E2F42;
+}
+
+.label-input {
+  width: 360px;
+  height: 40px;
+  outline: none;
+   border-radius: 4px;
+  border: 1px solid #808080;
+}
+
+.label-input:active,
+.label-input:focus {
+  border: 1px solid #4E75FF;
+  }
+
+.label-input:hover {
+  border: 1px solid #000000
+}
+
+.label-input:disabled {
+  color:#989898;
+}
+
+.label-text-input{
+  padding-bottom: 16px;
+}
+
+fieldset {
+  justify-content: center;
+  flex-direction: row;
+  gap: 48px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: auto;
+}
+
+.fieldset:active{
+  border: 1px solid #000000
+}
+
+.label-state{
+  padding-top: 24px;
+  padding-right: 48px;
+  padding-bottom: 8px;
+  padding-left: 48px;
+}
+
