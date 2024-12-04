@@ -29,15 +29,18 @@ form {
   margin-top: 36px;
   margin-bottom: 32px;
   flex-direction: row;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }
 
 input{
   width: 272px;
-  height: 40px;
   border-radius: 4px;
   border: 1px solid #808080;
   outline: none;
-padding-left: 16px;
+  padding-left: 16px;
+
 }
 
 input:hover {
@@ -53,12 +56,12 @@ input:active {
 button {
   letter-spacing: 0.04em;
   width: 91px;
-height: 40px;
-padding: 8px 16px 8px 16px;
-border-radius: 8px;
-background-color: #4E75FF;
-color: #FFFFFF;
-border: none;
+  height: 40px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 8px;
+  background-color: #4E75FF;
+  color: #FFFFFF;
+  border: none;
 }
 
 button:hover {
@@ -88,15 +91,15 @@ button:hover {
   align-items: center;
 }
 .title-img{
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33333;
-    letter-spacing: 0.04em;
-    color: #2e2f42;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
 }
 
 .likes-img{
-font-weight: 400;
+  font-weight: 400;
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;

@@ -35,10 +35,10 @@ function handleSearch(event) {
         );
         return;
     };
-    loader.style.display = "inline-block";
+    loader.style.display = "block";
     searchImages(inputSearch)
-        .then((arrImg) => {
-            if (arrImg.length === 0) {
+        .then((res) => {
+            if (res.hits.length === 0) {
                 iziToast.show({
                     title: '',
                     backgroundColor: 'red',
@@ -46,14 +46,16 @@ function handleSearch(event) {
                     position: 'topRight',
                 })
             };
-            renderImages(arrImg.hits, gallery)
+            renderImages(res.hits, gallery)
             lightbox.refresh();
             inputElement.value = "";
             loader.style.display = "none";
         })
-        .catch((error) => console.log(error))
-            gallery.insertAdjacentHTML("beforeend", renderImages(arrImg));
+        .catch((error) => {
+            console.log(error)
+            gallery.insertAdjacentHTML("beforeend", renderImages(res.hits));
             lightbox.refresh();
             inputElement.value = "";
             loader.style.display = "none";
-        }
+        })
+    }
