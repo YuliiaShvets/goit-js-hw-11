@@ -26,153 +26,110 @@ body {
   padding-left: 156px;
 }
 
+.search-form {
+  margin-top: 36px;
+  margin-left: 534px;
+  margin-right: 535px;
+}
 
-.input{
+input{
   width: 272px;
-  height: 36px;
+  height: 40px;
   border-radius: 4px;
   border: 1px solid #808080;
   outline: none;
+padding-left: 16px;
 }
 
-.input:hover {
+input:hover {
   border: 1px solid #000000
 }
 
 
-.input:focus,
-.input:active {
+input:focus,
+input:active {
   border: 1px solid #4E75FF;
 }
 
-.text {
-  color: #808080;
+button {
+  letter-spacing: 0.04em;
+  width: 91px;
+height: 40px;
+padding: 8px 16px 8px 16px;
+border-radius: 8px;
+background-color: #4E75FF;
+color: #FFFFFF;
+border: none;
 }
 
-.timer {
+button:hover {
+  background-color: #6C8CFF;
+}
+
+
+.gallery{
   display: flex;
-  margin-top: 32px;
+  flex-wrap: wrap;
   gap: 24px;
-  font-size: 40px;
 }
 
-.field {
+.gallery-item{
+  border: 1px solid #808080;
+}
+
+.image-description{
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  border-top: 1px solid #808080;
+}
+.gallery-img-item{
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+}
+.title-img{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33333;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
 }
 
-
-.value {
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 120%;
+.likes-img{
+font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
   letter-spacing: 0.04em;
   color: #2e2f42;
 }
 
-.label {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  color: #2e2f42;
-  text-transform: uppercase;
+.loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: none;
+  margin: 15px auto;
+  position: relative;
+  background: #FFF;
+  box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+  box-sizing: border-box;
+  animation: shadowPulse 2s linear infinite;
 }
 
-.start-button {
-  width: 75px;
-  height: 40px;
-  padding: 8px 16px 8px 16px;
-  border-radius: 8px;
-  border: none;
-  background-color: #4E75FF;
-  font-family: Montserrat;
-  font-size: 16px;
-  letter-spacing: 0.04em;
-  color: #FFFFFF;
-}
-
-.start-button:hover {
-  background-color: #6C8CFF;
-}
-
-.start-button:disabled {
-  background-color: #CFCFCF;
-  opacity: 0.5;
-  color: #808080;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-
-  max-width: 360px;
-  margin-top: 36px;
-  margin-left: 156px;
-}
-
-.form-button {
-  width: 360px;
-  padding: 8px 16px 8px 16px;
-  border-radius: 8px;
-  background-color: #4E75FF;
-  color: #FFFFFF;
-  text-align: center;
-}
-
-.form-button:hover {
-  background-color: #6C8CFF;
-
-}
-
-.label-text {
-  color: #2E2F42;
-}
-
-.label-input {
-  width: 360px;
-  height: 40px;
-  outline: none;
-   border-radius: 4px;
-  border: 1px solid #808080;
-}
-
-.label-input:active,
-.label-input:focus {
-  border: 1px solid #4E75FF;
+@keyframes shadowPulse {
+  33% {
+    background: #FFF;
+    box-shadow: -24px 0 #FF3D00, 24px 0 #FFF;
   }
 
-.label-input:hover {
-  border: 1px solid #000000
-}
+  66% {
+    background: #FF3D00;
+    box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+  }
 
-.label-input:disabled {
-  color:#989898;
+  100% {
+    background: #FFF;
+    box-shadow: -24px 0 #FFF, 24px 0 #FF3D00;
+  }
 }
-
-.label-text-input{
-  padding-bottom: 16px;
-}
-
-fieldset {
-  justify-content: center;
-  flex-direction: row;
-  gap: 48px;
-  border: 1px solid #808080;
-  border-radius: 4px;
-  width: auto;
-}
-
-.fieldset:active{
-  border: 1px solid #000000
-}
-
-.label-state{
-  padding-top: 24px;
-  padding-right: 48px;
-  padding-bottom: 8px;
-  padding-left: 48px;
-}
-
