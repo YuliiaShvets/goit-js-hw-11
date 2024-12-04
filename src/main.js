@@ -14,21 +14,20 @@ const lightbox = new SimpleLightbox('.gallery a', {
             });
 
 
-const form = document.querySelector(".form");
+const form = document.querySelector("#search-form");
 const gallery = document.querySelector(".gallery");
-const loader = document.querySelector(".loader")
+const loader = document.querySelector("#loader")
 
 form.addEventListener("submit", handleSearch);
 
 function handleSearch(event) {
     event.preventDefault();
     gallery.innerHTML = "";
-    let inputElement = event.target.elements.name;
+    let inputElement = event.target.elements["search-input"];
     const inputSearch = inputElement.value.trim();
     if (!inputSearch) {
         iziToast.show({
             title: '',
-            iconUrl: `${errorImage}`,
             backgroundColor: 'red',
             message: `Enter the data for the search!`,
             position: 'topRight',
@@ -37,22 +36,24 @@ function handleSearch(event) {
         return;
     };
     loader.style.display = "inline-block";
-    inputSearch(searchImages)
+    searchImages(inputSearch)
         .then((arrImg) => {
             if (arrImg.length === 0) {
                 iziToast.show({
                     title: '',
-                    iconUrl: `${errorImage}`,
                     backgroundColor: 'red',
                     message: `Sorry, there are no images matching your search query. Please try again!`,
                     position: 'topRight',
                 })
             };
-            gallery.insertAdjacentHTML("beforeend", renderImages(arrImg));
+            renderImages(arrImg.hits, gallery)
             lightbox.refresh();
             inputElement.value = "";
             loader.style.display = "none";
         })
         .catch((error) => console.log(error))
-}
-
+            gallery.insertAdjacentHTML("beforeend", renderImages(arrImg));
+            lightbox.refresh();
+            inputElement.value = "";
+            loader.style.display = "none";
+        }

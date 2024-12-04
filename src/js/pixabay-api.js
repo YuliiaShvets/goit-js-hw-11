@@ -18,8 +18,6 @@ return fetch(`${BASE_URL}?${params}`)
           }
      return res.json();
 })
-.then((data) =>  data.hits)   
+ 
 }
-
-
 

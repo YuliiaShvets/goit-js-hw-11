@@ -33,4 +33,3 @@ export function renderImages(images) {
 
     gallery.innerHTML = markup;
 }
-
